@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { ParseableText } from './ParseableText';
 
 export const CheckListItem = ({ checked, colourDetails, onSelected }) => {
     let checkmark = checked ? (
@@ -22,7 +23,7 @@ export const CheckListItem = ({ checked, colourDetails, onSelected }) => {
                 >
                     {colourDetails.name}
                 </Text>
-                <Text>{colourDetails.description}</Text>
+                <ParseableText>{colourDetails.description}</ParseableText>
             </View>
             <View style={styles.outerColourCircle}>
                 <View

@@ -1,14 +1,16 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FlowNavigator } from '../../components/FlowNavigator';
+import { ParseableText } from '../../components/ParseableText';
 import { RangeSelector } from '../../components/RangeSelector';
 import { SearchBox } from '../../components/SearchBox';
-import { AromaIntensityExplanations } from '../../data';
+import { AromaIntensityExplanations, PrimaryDescriptors } from '../../data';
 import { globalStyles } from '../../styles';
 
 export const Nose = () => {
+    let scrollContainer = useRef<ScrollView>();
     const navigation = useNavigation();
 
     const [intensity, setIntensity] = useState<string | null>(null);
@@ -21,10 +23,17 @@ export const Nose = () => {
         navigation.navigate('Home');
     };
 
+    const scrollIntoView = (y) => {
+        scrollContainer.current.scrollTo({ y, animated: true });
+    };
+
     return (
         <>
             <SafeAreaView style={styles.container}>
-                <ScrollView>
+                <ScrollView
+                    keyboardShouldPersistTaps="handled"
+                    ref={scrollContainer}
+                >
                     <Text style={globalStyles.H1}>Nose 👃</Text>
                     <Text style={globalStyles.H2}>
                         The aroma intensity is ...
@@ -34,28 +43,37 @@ export const Nose = () => {
                         selectedValue={intensity}
                         onValueChanged={(value: string) => setIntensity(value)}
                     />
-                    <Text style={globalStyles.MB}>
+                    <ParseableText style={globalStyles.MB}>
                         {AromaIntensityExplanations[intensity]}
-                    </Text>
+                    </ParseableText>
 
                     <Text style={globalStyles.H2}>Primary aromas</Text>
                     <Text style={globalStyles.MB_SMALL}>
                         The aromas and flavours of the grape and alcoholic
                         fermentation.
                     </Text>
-                    <SearchBox></SearchBox>
+                    <SearchBox
+                        descriptors={PrimaryDescriptors}
+                        onFocus={(view) => scrollIntoView(view)}
+                    ></SearchBox>
 
                     <Text style={globalStyles.H2}>Secondary aromas</Text>
                     <Text style={globalStyles.MB_SMALL}>
                         The aromas and flavours of post-fermentation winemaking
                     </Text>
-                    <SearchBox></SearchBox>
+                    <SearchBox
+                        descriptors={PrimaryDescriptors}
+                        onFocus={scrollIntoView}
+                    ></SearchBox>
 
                     <Text style={globalStyles.H2}>Tertiary aromas</Text>
                     <Text style={globalStyles.MB_SMALL}>
                         The aromas and flavours of maturation
                     </Text>
-                    <SearchBox></SearchBox>
+                    <SearchBox
+                        descriptors={PrimaryDescriptors}
+                        onFocus={scrollIntoView}
+                    ></SearchBox>
                     <View style={globalStyles.LASTCOMPONENTMARGIN}></View>
                 </ScrollView>
             </SafeAreaView>

@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { CheckGroup } from '../../components/CheckGroup';
 import { CheckList } from '../../components/CheckList';
 import { FlowNavigator } from '../../components/FlowNavigator';
+import { ParseableText } from '../../components/ParseableText';
 import { RangeSelector } from '../../components/RangeSelector';
 import {
     ColourIntensityExplanations,
@@ -65,7 +66,7 @@ export const Appearance = () => {
                             setColourIntensity(value)
                         }
                     />
-                    <Text style={globalStyles.LASTCOMPONENTMARGIN}>
+                    <ParseableText>
                         {
                             ColourIntensityExplanations.find(
                                 (e) =>
@@ -73,7 +74,8 @@ export const Appearance = () => {
                                     e.intensity === colourIntensity
                             )?.description
                         }
-                    </Text>
+                    </ParseableText>
+                    <Text style={globalStyles.LASTCOMPONENTMARGIN}></Text>
                 </ScrollView>
             </SafeAreaView>
             <FlowNavigator

@@ -8,25 +8,25 @@ export const SubColours: {
     Red: [
         {
             name: 'Ruby',
-            description: 'The most common colour for red wine is Ruby',
+            description: 'The most common colour for red wine is **(Ruby)**',
             colourCode: '#801C34',
         },
         {
             name: 'Purple',
             description:
-                'Wines with noticable blue or purple colour are Purple',
+                'Wines with noticable blue or purple colour are **(Purple)**',
             colourCode: '#5A1A31',
         },
         {
             name: 'Garnet',
             description:
-                'If there is a noticeable orange or brown colour, it is Garnet',
+                'If there is a noticeable orange or brown colour, it is **(Garnet)**',
             colourCode: '#7E1B1E',
         },
         {
             name: 'Tawny',
             description:
-                'If the wine is more brown than red, it may be described as Tawny',
+                'If the wine is more brown than red, it may be described as **(Tawny)**',
             colourCode: '#903922',
         },
     ],
@@ -69,25 +69,25 @@ export const ColourIntensityExplanations: ColourIntensityExplanation[] = [
         colour: 'Red',
         intensity: 'Pale',
         description:
-            'The wine is lightly pigmented from rim to core. The stem is clearly visible when looking at the wine from above.',
+            'The wine is lightly pigmented from rim to core. The stem is **(clearly visible)** when looking at the wine from above.',
     },
     {
         colour: 'Red',
         intensity: 'Medium',
         description:
-            'The stem is barely but still visible when looking at the wine from above.',
+            'The stem is **(barely but still visible)** when looking at the wine from above.',
     },
     {
         colour: 'Red',
         intensity: 'Deep',
         description:
-            'The wine is deeply pigmented from rim to core. It is impossible to see the stem when looking at the wine from above',
+            'The wine is deeply pigmented from rim to core. It is **(impossible to see the stem)** when looking at the wine from above',
     },
     {
         colour: 'White',
         intensity: 'Pale',
         description:
-            'When holding the wine at a 45 degree angle, it has a broad watery rim.',
+            'When holding the wine at a 45 degree angle, it has a **(broad watery rim)**.',
     },
     {
         colour: 'White',
@@ -98,7 +98,7 @@ export const ColourIntensityExplanations: ColourIntensityExplanation[] = [
         colour: 'White',
         intensity: 'Deep',
         description:
-            "When holding the wine at a 45 degree angle, it's pigment nearly reaches the rim",
+            "When holding the wine at a 45 degree angle, it's **(pigment nearly reaches the rim)**",
     },
     {
         colour: 'Rosé',
@@ -119,149 +119,262 @@ export const ColourIntensityExplanations: ColourIntensityExplanation[] = [
 
 export const AromaIntensityExplanations = {
     Light:
-        'The aromas are hard to detect and faint, even after swirling the glass.',
-    Medium: 'The aromas are easy to detect after swirling the glass.',
+        'The aromas are **(hard to detect and faint)**, even after swirling the glass.',
+    Medium: 'The aromas are easy to detect **(after swirling the glass)**.',
     Pronounced:
-        'The aromas are immediately appareant without swirling the glass.',
+        'The aromas are **(immediately appareant)** without swirling the glass.',
 };
 
-export const Descriptors: Descriptor[] = [
+export const PrimaryDescriptors: Descriptor[] = [
     {
         name: 'Blossom',
-        category: {
-            name: 'Floral',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#F0CADF',
     },
     {
         name: 'Rose',
-        category: {
-            name: 'Floral',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#C40111',
     },
     {
         name: 'Violet',
-        category: {
-            name: 'Floral',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#A492C8',
     },
     {
         name: 'Apple',
-        category: {
-            name: 'Green fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#8DAA42',
     },
     {
         name: 'Pear',
-        category: {
-            name: 'Green fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#AEB50E',
     },
     {
         name: 'Gooseberry',
-        category: {
-            name: 'Green fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#ACAC42',
     },
     {
         name: 'Grape',
-        category: {
-            name: 'Green fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#BAD15B',
     },
     {
         name: 'Grapefruit',
-        category: {
-            name: 'Citrus fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#E6580C',
     },
     {
         name: 'Lemon',
-        category: {
-            name: 'Citrus fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#F2C71D',
     },
     {
         name: 'Lime',
-        category: {
-            name: 'Citrus fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#A6BA3F',
     },
     {
         name: 'Orange',
-        category: {
-            name: 'Citrus fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#DC5810',
     },
     {
         name: 'Peach',
-        category: {
-            name: 'Stone fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#F7A318',
     },
     {
         name: 'Apricot',
-        category: {
-            name: 'Stone fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#F59131',
     },
     {
         name: 'Nectarine',
-        category: {
-            name: 'Stone fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        color: '#E1553F',
     },
     {
-        name: 'Banana',
-        category: {
-            name: 'Tropical fruit',
-            color: '',
-            icon: 'TODO',
-            categoryType: 'Primary',
-        },
+        name: 'Lychee',
+        color: '#C03E50',
+    },
+    {
+        name: 'Mango',
+        color: '#F5C943',
+    },
+    {
+        name: 'Melon',
+        color: '#A6BD5B',
+    },
+    {
+        name: 'Passion fruit',
+        color: '#4F262A',
+    },
+    {
+        name: 'Pineapple',
+        color: '#CE994B',
+    },
+    {
+        name: 'Redcurrant',
+        color: '#E83220',
+    },
+    {
+        name: 'Cranberry',
+        color: '#BE0320',
+    },
+    {
+        name: 'Raspberry',
+        color: '#E25565',
+    },
+    {
+        name: 'Strawberry',
+        color: '#E52829',
+    },
+    {
+        name: 'Red cherry',
+        color: '#C10C22',
+    },
+    {
+        name: 'Red plum',
+        color: '#B9091C',
+    },
+    {
+        name: 'Blackcurrant',
+        color: '#0D0D18',
+    },
+    {
+        name: 'Blackberry',
+        color: '#272127',
+    },
+    {
+        name: 'Blueberry',
+        color: '#3F5B85',
+    },
+    {
+        name: 'Black cherry',
+        color: '#370203',
+    },
+    {
+        name: 'Black plum',
+        color: '#36262B',
+    },
+    {
+        name: 'Green bell pepper',
+        color: '#365F21',
+    },
+    {
+        name: 'Grass',
+        color: '#658D02',
+    },
+    {
+        name: 'Tomato leaf',
+        color: '#5FAB40',
+    },
+    {
+        name: 'Asparagus',
+        color: '#5B9212',
+    },
+    {
+        name: 'Eucalyptus',
+        color: '#2E6055',
+    },
+    {
+        name: 'Mint',
+        color: '#83C04A',
+    },
+    {
+        name: 'Fennel',
+        color: '#F0F5AD',
+    },
+    {
+        name: 'Dill',
+        color: '#78AB29',
+    },
+    {
+        name: 'Dried herbs',
+        color: '#606949',
+    },
+    {
+        name: 'Black pepper',
+        color: '#4E4843',
+    },
+    {
+        name: 'White pepper',
+        color: '#C1AF7F',
+    },
+    {
+        name: 'Liquorice',
+        color: '#714D22',
+    },
+    {
+        name: 'Wet stones',
+        color: '#B1B2B7',
+    },
+    {
+        name: 'Candy',
+        color: '#ED6374',
     },
 ];
+
+export const SecondaryDescriptors: Descriptor[] = [
+    {
+        name: 'Biscuit',
+        color: '#DAC072',
+    },
+    {
+        name: 'Pastry',
+        color: '#F1B884',
+    },
+    {
+        name: 'Bread',
+        color: '#DDAE70',
+    },
+    {
+        name: 'Toasted bread',
+        color: '#D99B4F',
+    },
+    {
+        name: 'Bread dough',
+        color: '#E2D9C9x',
+    },
+    {
+        name: 'Cheese',
+        color: '',
+    },
+    {
+        name: 'Yoghurt',
+        color: '',
+    },
+    {
+        name: 'Butter',
+        color: '',
+    },
+    {
+        name: 'Cream',
+        color: '',
+    },
+    {
+        name: 'Vanilla',
+        color: '',
+    },
+    {
+        name: 'Cloves',
+        color: '',
+    },
+    {
+        name: 'Coconut',
+        color: '',
+    },
+    {
+        name: 'Cedar',
+        color: '',
+    },
+    {
+        name: 'Charred wood',
+        color: '',
+    },
+    {
+        name: 'Smoke',
+        color: '',
+    },
+    {
+        name: 'Chocolate',
+        color: '',
+    },
+    {
+        name: 'Coffee',
+        color: '',
+    },
+];
+export const TertiaryDescriptors: Descriptor[] = [];
 
 export interface WineColour {
     name: string;
@@ -277,12 +390,5 @@ export interface ColourIntensityExplanation {
 
 export interface Descriptor {
     name: string;
-    category: DescriptorCategory;
-}
-
-export interface DescriptorCategory {
-    name: string;
     color: string;
-    icon: string;
-    categoryType: 'Primary' | 'Secondary' | 'Teriary';
 }
